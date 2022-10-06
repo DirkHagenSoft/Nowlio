@@ -1,0 +1,482 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Nowlio Core</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- <link rel="stylesheet" href="w3bar.css" /> -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="desktop.css" />
+    <meta meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style media="screen, print">
+        /* inter-500 - latin */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            src: local(''),
+                url('inter-v12-latin-500.woff2') format('woff2'),
+                /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('inter-v12-latin-500.woff') format('woff');
+            /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+        /* inter-regular - latin */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            src: local(''),
+                url('inter-v12-latin-regular.woff2') format('woff2'),
+                /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('inter-v12-latin-regular.woff') format('woff');
+            /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+
+        body {
+            font-family: "Inter", serif;
+            font-weight: 500;
+            color: #18191A;
+        }
+    </style>
+</head>
+
+<script>
+    const backgImage = "url('back.jpeg') no-repeat center fixed";
+    const backgImage2 = "url('bluebackground.jpg') no-repeat center fixed";
+    const backgWhite = "#fff";
+    let backStatus = 1;
+
+    function myFunction()
+    {
+        // document.body.style.background = backgImage;
+        // document.body.style.backgroundSize = "cover";
+        if (backStatus == 0)
+        {
+            document.body.style.background = backgImage;
+            document.body.style.backgroundSize = "cover";
+            backStatus = 1;
+        }
+        else
+        {
+            document.body.style.background = backgWhite;
+            backStatus = 0;
+        }
+
+        // //   document.getElementById("demo").style.color = "red";
+        // document.getElementById("inlineFrameExample").style.width = "calc(100vw - 300px)";
+        // document.getElementById("inlineFrameExample").style.height = "calc(100vh - 400px)";
+    }
+
+    // function myFunction2()
+    // {
+    //     //   document.getElementById("demo").style.color = "red";
+    //     document.getElementById("inlineFrameExample").style.width = "calc(100vw - 100px)";
+    //     document.getElementById("inlineFrameExample").style.height = "calc(100vh - 150px)";
+    // }
+
+    // function myFunction2()
+    // {
+    //     //   document.getElementById("demo").style.color = "red";
+    //     document.getElementById("inlineFrameExample").style.width = "calc(100vw - 100px)";
+    //     document.getElementById("inlineFrameExample").style.height = "calc(100vh - 150px)";
+    // }
+
+    function openAppFunction1(url)
+    {
+        // document.getElementById("desktops-win").style.display = "none";
+
+        document.getElementById("desktop-num-1").style.visibility = "hidden";
+        document.getElementById("desktop-num-1").style.display = "none";
+        document.getElementById("desktop-num-2").style.visibility = "hidden";
+        document.getElementById("desktop-num-2").style.display = "none";
+        document.getElementById("desktop-num-3").style.visibility = "hidden";
+        document.getElementById("desktop-num-3").style.display = "none";
+
+        document.getElementById("inlineFrameExample1").style.visibility = "hidden";
+        document.getElementById("inlineFrameExample2").style.visibility = "hidden";
+        document.getElementById("inlineFrameExample").style.visibility = "hidden";
+
+        document.getElementById("inlineFrameExample1").style.display = "none";
+        document.getElementById("inlineFrameExample2").style.display = "none";
+        document.getElementById("inlineFrameExample").style.display = "none";
+
+        document.getElementById("inlineFrameExample").style.visibility = "visible";
+        document.getElementById("inlineFrameExample").style.display = "block";;
+        console.log(url);
+        document.getElementById("inlineFrameExample").src = url;
+
+        if (window.matchMedia("(max-width: 720px)").matches)
+        {
+            document.getElementById("win-control-1").style.visibility = "hidden";
+            document.getElementById("win-control-1").style.display = "none";
+        }
+        else
+        {
+            document.getElementById("win-control-1").style.visibility = "visible";
+            document.getElementById("win-control-1").style.display = "block";
+        }
+    }
+
+    function openAppFunction2(url1, url2)
+    {
+        document.getElementById("desktop-num-1").style.visibility = "hidden";
+        document.getElementById("desktop-num-1").style.display = "none";
+        document.getElementById("desktop-num-2").style.visibility = "hidden";
+        document.getElementById("desktop-num-2").style.display = "none";
+        document.getElementById("desktop-num-3").style.visibility = "hidden";
+        document.getElementById("desktop-num-3").style.display = "none";
+
+        document.getElementById("inlineFrameExample1").style.visibility = "hidden";
+        document.getElementById("inlineFrameExample2").style.visibility = "hidden";
+        document.getElementById("inlineFrameExample").style.visibility = "hidden";
+
+        document.getElementById("inlineFrameExample1").style.display = "none";
+        document.getElementById("inlineFrameExample2").style.display = "none";
+        document.getElementById("inlineFrameExample").style.display = "none";
+
+        //1
+        document.getElementById("inlineFrameExample1").style.visibility = "visible";
+        document.getElementById("inlineFrameExample1").style.display = "block";
+        document.getElementById("inlineFrameExample1").src = url1;
+        //2
+        document.getElementById("inlineFrameExample2").style.visibility = "visible";
+        document.getElementById("inlineFrameExample2").style.display = "block";
+        document.getElementById("inlineFrameExample2").src = url2;
+    }
+
+    function openDesktopSwitcher()
+    {
+        document.getElementById("desktop-scroll-container").style.visibility = "visible";
+        document.getElementById("desktop-scroll-container").style.display = "block";
+    }
+
+    function openDesktop(num)
+    {
+        document.getElementById("win-control-1").style.visibility = "hidden";
+        document.getElementById("win-control-1").style.display = "none";
+
+        document.getElementById("inlineFrameExample").style.visibility = "hidden";
+        document.getElementById("inlineFrameExample1").style.visibility = "hidden";
+        document.getElementById("inlineFrameExample2").style.visibility = "hidden";
+
+        document.getElementById("desktop-scroll-container").style.visibility = "hidden";
+        document.getElementById("desktop-scroll-container").style.display = "none";
+
+        document.getElementById("desktop-num-1").style.visibility = "hidden";
+        document.getElementById("desktop-num-1").style.display = "none";
+        document.getElementById("desktop-num-2").style.visibility = "hidden";
+        document.getElementById("desktop-num-2").style.display = "none";
+        document.getElementById("desktop-num-3").style.visibility = "hidden";
+        document.getElementById("desktop-num-3").style.display = "none";
+
+        if (num == 1)
+        {
+            document.body.style.background = backgImage;
+            document.body.style.backgroundSize = "cover";
+            backStatus = 1;
+
+            let children = document.getElementById("pc-app-icons").children;
+            let childrenMobile = document.getElementById("mobile-app-icons").children;
+            for (i = 1; i < children.length; i++)
+            {
+                let svgName = (i) + ".svg";
+                children[i].firstChild.src = svgName;
+                childrenMobile[i].firstChild.src = svgName;
+            }
+
+            document.getElementById("desktop-preview-select-1").className = "desktop-preview-select-active";
+            document.getElementById("desktop-preview-select-2").className = "desktop-preview-select-inactive";
+            document.getElementById("desktop-preview-select-3").className = "desktop-preview-select-inactive";
+        }
+        else if (num == 2)
+        {
+            document.body.style.background = backgImage2;
+            document.body.style.backgroundSize = "cover";
+            backStatus = 1;
+
+            let children = document.getElementById("pc-app-icons").children;
+            let childrenMobile = document.getElementById("mobile-app-icons").children;
+            for (i = 1; i < children.length; i++)
+            {
+                let svgName = (41 + i) + ".svg";
+                children[i].firstChild.src = svgName;
+                childrenMobile[i].firstChild.src = svgName;
+            }
+
+            document.getElementById("desktop-preview-select-1").className = "desktop-preview-select-inactive";
+            document.getElementById("desktop-preview-select-2").className = "desktop-preview-select-active";
+            document.getElementById("desktop-preview-select-3").className = "desktop-preview-select-inactive";
+        }
+        else if (num == 3)
+        {
+            document.body.style.background = backgWhite;
+            backStatus = 0;
+
+            document.getElementById("desktop-preview-select-1").className = "desktop-preview-select-inactive";
+            document.getElementById("desktop-preview-select-2").className = "desktop-preview-select-inactive";
+            document.getElementById("desktop-preview-select-3").className = "desktop-preview-select-active";
+        }
+
+        document.getElementById("desktop-num-" + num).style.visibility = "visible";
+        document.getElementById("desktop-num-" + num).style.display = "block";
+    }
+</script>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-content">
+            <div class="main-header-logo">
+                <h1 id="demo"></h1>
+            </div>
+            <div class="main-header-apps-pc">
+                <div id="pc-app-icons" class="scrollmenu">
+                    <a onclick="openDesktopSwitcher()" href="#"><img src="home.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=1')" href="#"><img src="1.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction2('app.html?a=11','app.html?a=2')" href="#"><img src="2.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=3')" href="#"><img src="3.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=4')" href="#"><img src="4.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=5')" href="#"><img src="5.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=6')" href="#"><img src="6.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=7')" href="#"><img src="7.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=8')" href="#"><img src="8.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=9')" href="#"><img src="10.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=10')" href="#"><img src="5.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+
+                    <!-- <a href="#"><img src="3.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="4.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="5.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="6.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="7.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="8.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="9.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="10.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="11.svg" alt="" style="width:44px;height:44px;"></a> -->
+                </div>
+            </div>
+
+            <div class="main-header-apps-mobile">
+                <div id="mobile-app-icons" class="scrollmenu">
+                    <a onclick="openDesktopSwitcher()" href="#"><img src="home.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=1')" href="#"><img src="1.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction2('app.html?a=11','app.html?a=2')" href="#"><img src="2.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=3')" href="#"><img src="3.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=4')" href="#"><img src="4.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=5')" href="#"><img src="5.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=6')" href="#"><img src="6.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=7')" href="#"><img src="7.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=8')" href="#"><img src="8.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=9')" href="#"><img src="10.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('app.html?a=10')" href="#"><img src="5.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+
+                    <!-- <a onclick="openDesktopSwitcher()" href="#"><img src="home.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="openAppFunction1('https://www.drawlio.com/')" href="#"><img src="1.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+
+                    <a href="#"><img src="2.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="4.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="5.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="6.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="7.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="8.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="9.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="10.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a href="#"><img src="11.svg" alt="" style="width:44px;height:44px;"></a>
+                    <a onclick="myFunction()" href="#"><img src="settings.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a onclick="myFunction()" href="#"><img src="user.svg" alt="" style="width:44px;height:44px;"></a> -->
+
+                    <!-- <a class="whitebutton-in-scrollbar" onclick="myFunction()" href="#"><img src="settings1.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a class="whitebutton-in-scrollbar" onclick="myFunction()" href="#"><img src="settings1.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a class="whitebutton-in-scrollbar" onclick="myFunction()" href="#"><img src="settings1.svg" alt=""
+                            style="width:44px;height:44px;"></a>
+                    <a class="whitebutton-in-scrollbar" onclick="myFunction()" href="#"><img src="settings1.svg" alt=""
+                            style="width:44px;height:44px;"></a> -->
+                </div>
+            </div>
+
+            <div class="main-header-nav" style="visibility: visible;">
+                <a href="#" onclick="myFunction()" class="whitebutton"><img src="settings.svg" alt=""
+                        style="width:44px;height:44px;"></a>
+                <a href="#" onclick="myFunction()" class="whitebutton"><img src="user.svg" alt=""
+                        style="width:44px;height:44px;"></a>
+            </div>
+        </div>
+    </header>
+    <div id="desktop-scroll-container" class="scroll-container1" style="display:none;visibility:hidden;">
+        <div class="flexbox-container1">
+            <!-- Preview -->
+            <div class="round-desktop-container">
+                <div class="flexbox-panel" style="flex-wrap: wrap;">
+                    <div class="flexbox-item">
+                        <div class="desktop-preview-container">
+                            <div class="desktop-preview-container-inner">
+                                <div class="desktop-preview-title">Desktop 1</div>
+                                <div class="desktop-preview-image-container">
+                                    <a onclick="openDesktop(1)" href="#">
+                                        <img class="desktop-preview-image" src="back-preview.jpg" alt=""
+                                            style="width:100%;height:100%;">
+                                    </a>
+                                </div>
+                                <div id="desktop-preview-select-1" class="desktop-preview-select-active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexbox-item">
+                        <div class="desktop-preview-container">
+                            <div class="desktop-preview-container-inner">
+                                <div class="desktop-preview-title">Desktop 2</div>
+                                <div class="desktop-preview-image-container">
+                                    <a onclick="openDesktop(2)" href="#">
+                                        <img class="desktop-preview-image" src="bluebackground-preview.jpg" alt=""
+                                            style="width:100%;height:100%;">
+                                    </a>
+                                </div>
+                                <div id="desktop-preview-select-2" class="desktop-preview-select-inactive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexbox-item">
+                        <div class="desktop-preview-container">
+                            <div class="desktop-preview-container-inner">
+                                <div class="desktop-preview-title">New Desktop</div>
+                                <div class="desktop-preview-image-container">
+                                    <a onclick="openDesktop(3)" href="#">
+                                        <img class="desktop-preview-image" src="newdesktop-preview.jpg" alt=""
+                                            style="width:100%;height:100%;">
+                                    </a>
+                                </div>
+                                <div id="desktop-preview-select-3" class="desktop-preview-select-inactive"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="desktop-num-1" class="desktop-1" style="display:none;">
+        <div class="desktop-flex-container">
+            <div style="max-width: 600px;margin-right: 16px;">
+                <img class="svg-in-desk-container" src="ecommercechart.svg" alt="">
+                <img class="svg-in-desk-container" src="tableecommerce.svg" alt="">
+            </div>
+            <div>
+                <img class="svg-in-desk-container" src="bestsellerecommerce.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="desktop-num-2" class="desktop-1" style="display:none;">
+        <!-- <div class="desktop-title-1">Desktop 2</div> -->
+        <div class="desktop-flex-container">
+            <img class="svg-in-desk-container" src="privatnotes.svg" alt="" style="max-width: 360px;">
+            <img class="svg-in-desk-container" src="stickynote.svg" alt="" style="max-width: 300px;">
+        </div>
+    </div>
+
+    <div id="desktop-num-3" class="desktop-1" style="display:none;">
+        <!-- <div class="desktop-title-1">Desktop 3</div> -->
+        <!-- <img src="ecommercechart.svg" alt=""
+                            style="width:400px;"> -->
+    </div>
+
+    <!-- <div id="desktops-win" style="display: none;" class="desktops-box">
+        <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'London')">E-Commerce</button>
+            <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Tischlerei</button>
+            <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Privat</button>
+        </div>
+
+        <div id="London" class="w3-container w3-border city">
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Paris" class="w3-container w3-border city" style="display:none">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Tokyo" class="w3-container w3-border city" style="display:none">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div> -->
+
+
+    <div id="id-iframes-1-box" style="visibility: hidden;" class="iframes-1-box">
+        <div id="win-control-1" style="border-bottom: 1px solid rgba(200,200,200,0.5); height: 27px; padding: 4px; visibility: hidden; display: none; margin-left: 30px; margin-right: 30px; background: rgba(244, 244, 244, 0.8); border-radius: 4px 4px 0 0; padding-left: 8px;">
+            <a onclick="" href="#">
+                <img src="green.svg" alt="" style="width:12px;height:12px;">
+            </a>
+            <a onclick="" href="#">
+                <img src="yellow.svg" alt="" style="width:12px;height:12px;">
+            </a>
+            <a onclick="" href="#">
+                <img src="red.svg" alt="" style="width:12px;height:12px;">
+            </a>
+        </div>
+        <iframe class="iframe1" style="visibility: hidden;" id="inlineFrameExample" title="Inline Frame Example" src="">
+        </iframe>
+    </div>
+    <div id="id-iframes-2-box" style="visibility: hidden;" class="iframes-2-box">
+        <iframe class="iframe3" style="visibility: hidden; margin-right: 0px;" id="inlineFrameExample1" title="Inline Frame Example"
+            src="">
+        </iframe>
+
+        <iframe class="iframe1" style="visibility: hidden; margin-left: 0px;" id="inlineFrameExample2" title="Inline Frame Example"
+            src="">
+        </iframe>
+    </div>
+
+    <script>
+        function openCity(evt, cityName)
+        {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++)
+            {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++)
+            {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " w3-red";
+        }
+    </script>
+
+
+</body>
+
+</html>

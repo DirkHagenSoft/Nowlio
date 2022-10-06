@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nowlio Apps</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow" />
+    <style>
+        /* inter-500 - latin */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            src: local(''),
+                url('inter-v12-latin-500.woff2') format('woff2'),
+                /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('inter-v12-latin-500.woff') format('woff');
+            /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+        /* inter-regular - latin */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            src: local(''),
+                url('inter-v12-latin-regular.woff2') format('woff2'),
+                /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('inter-v12-latin-regular.woff') format('woff');
+            /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+        html {
+            min-height: 100%;
+            height: 100%;
+        }
+
+
+        body {
+            font-family: "Inter", serif;
+            font-weight: 500;
+            color: #18191A;
+            margin: 0;
+            padding: 0;
+            /* background: url("back.jpeg") no-repeat center fixed;
+            background-size: cover;
+            background-color: #fff; */
+            max-width: 100%;
+            width: 100%;
+            min-height: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .topbar {
+            text-align: center;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: normal;
+            align-content: normal;
+            height: 100%;
+            margin-top: 8px;
+        }
+
+        .flex-items:nth-child(1) {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+            width: 200px;
+            margin: 8px;
+
+        }
+
+        .flex-items:nth-child(2) {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+            width: 200px;
+            margin: 8px;
+
+        }
+
+        .flex-items:nth-child(3) {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+            width: 200px;
+            margin: 8px;
+
+        }
+
+        #holzrechner-svg {
+    width: 33%;
+}
+@media only screen and (max-width: 720px) {
+    #holzrechner-svg  {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+
+<body onload="loadPage()">
+
+    <div id="app1" style="visibility: hidden; width: 100%;height: 100%;">
+        <!-- <div class="topbar">
+            Project Management
+        </div> -->
+
+        <img src="projectmanagement.svg" alt="" style="object-fit: cover; width:100%;">
+
+        <!-- <div class="flex-container">
+            <div class="flex-items">
+                <div style="text-align: center; padding: 8px; background: #2180f445; border-radius: 2px;">To-Do</div>
+                <div style="text-align: left; padding: 8px; background: white; border: 1px solid #ddd; border-radius: 2px; margin-top: 16px;">
+                    <div style="text-align: left;">Rechnung stellen</div>
+                    <div style="font-size: 11px; margin-top: 8px;">Firma Müller bis 03.12.2022 Rechnung stellen</div>
+                </div>
+                <div style="text-align: left; padding: 8px; background: white; border: 1px solid #ddd; border-radius: 2px; margin-top: 16px;">
+                    <div style="text-align: left;">Rechnung stellen</div>
+                    <div style="font-size: 11px; margin-top: 8px;">Firma Müller bis 03.12.2022 Rechnung stellen</div>
+                </div>
+                <div style="text-align: left; padding: 8px; background: white; border: 1px solid #ddd; border-radius: 2px; margin-top: 16px;">
+                    <div style="text-align: left;">Rechnung stellen</div>
+                    <div style="font-size: 11px; margin-top: 8px;">Firma Müller bis 03.12.2022 Rechnung stellen</div>
+                </div>
+            </div>
+            <div class="flex-items">
+                <div style="text-align: center; padding: 8px; background: #eaea79d4; border-radius: 2px;">In Arbeit</div>
+                <div style="text-align: left; padding: 8px; background: white; border: 1px solid #ddd; border-radius: 2px; margin-top: 16px;">
+                    <div style="text-align: left;">Rechnung stellen</div>
+                    <div style="font-size: 11px; margin-top: 8px;">Firma Müller bis 03.12.2022 Rechnung stellen</div>
+                </div>
+                <div style="text-align: left; padding: 8px; background: white; border: 1px solid #ddd; border-radius: 2px; margin-top: 16px;">
+                    <div style="text-align: left;">Rechnung stellen</div>
+                    <div style="font-size: 11px; margin-top: 8px;">Firma Müller bis 03.12.2022 Rechnung stellen</div>
+                </div>
+            </div>
+            <div class="flex-items">
+                <div style="text-align: center; padding: 8px; background: #90ee90e3; border-radius: 2px;">Erledigt</div>
+                <div style="text-align: left; padding: 8px; background: white; border: 1px solid #ddd; border-radius: 2px; margin-top: 16px;">
+                    <div style="text-align: left;">Rechnung stellen</div>
+                    <div style="font-size: 11px; margin-top: 8px;">Firma Müller bis 03.12.2022 Rechnung stellen</div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <div id="app2" style="visibility: hidden">
+        <div class="topbar">
+            Rechnung erstellen
+        </div>
+        <img src="rechnung.svg" alt="" style="margin-top: 8px; object-fit: cover; width:100%;">
+    </div>
+
+    <div id="app3" style="visibility: hidden; background: #fafafa;">
+        <img src="mindmapmap2.svg" alt="" style="object-fit: cover; width:100%;">
+    </div>
+
+    <div id="app4" style="visibility: hidden; width:100%; height:100%;">
+        <div class="topbar" style="font-size: 24px; color: rgb(10, 147, 10);">
+            Holzrechner
+        </div>
+        <img id="holzrechner-svg" src="holzapp.svg" alt="" style="object-fit: cover; margin: 16px auto 0 auto; display: block;">
+    </div>
+
+    <div id="app5" style="visibility: hidden">
+        <div class="topbar">
+            Note
+        </div>
+        <img src="stickynote.svg" alt="" style="width:180px; margin: 16px;">
+        <img src="stickynote1.svg" alt="" style="width:180px; margin: 16px;">
+        <img src="stickynote2.svg" alt="" style="width:180px; margin: 16px;">
+        <img src="stickynote3.svg" alt="" style="width:180px; margin: 16px;">
+        <img src="stickynote4.svg" alt="" style="width:180px; margin: 16px;">
+        <img src="stickynote5.svg" alt="" style="width:180px; margin: 16px;">
+    </div>
+
+    <div id="app6" style="visibility: hidden">
+        <div class="topbar">
+            App 6
+        </div>
+    </div>
+    <div id="app7" style="visibility: hidden">
+        <div class="topbar">
+            App 7
+        </div>
+    </div>
+
+    <div id="app8" style="visibility: hidden">
+        <div class="topbar">
+            App 8
+        </div>
+    </div>
+
+    <div id="app9" style="visibility: hidden">
+        <div class="topbar">
+            App 9
+        </div>
+    </div>
+
+    <div id="app10" style="visibility: hidden">
+        <div class="topbar">
+            App 10
+        </div>
+    </div>
+    <div id="app11" style="visibility: hidden">
+        <!-- <div class="topbar">
+            App 10
+        </div> -->
+        <img src="projectmanagementsmall.svg" alt="" style="object-fit: cover; width:100%;">
+    </div>
+
+    <script>
+        function getUrlVars()
+        {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                function (m, key, value)
+                {
+                    vars[key] = value;
+                });
+            return vars;
+        }
+
+        function loadPage()
+        {
+            var page = getUrlVars()["a"];
+
+            console.log(page);
+
+
+            for (let i = 1; i < 12; i++)
+            {
+                document.getElementById("app" + i.toString()).style.visibility = "hidden";
+                document.getElementById("app" + i.toString()).style.display = "none";
+            }
+
+            document.getElementById("app" + page).style.visibility = "visible";
+            document.getElementById("app" + page).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

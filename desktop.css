@@ -1,0 +1,187 @@
+.flexbox-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flexbox-item {
+    flex: 0 1 auto;    
+}
+
+.flex-item:nth-child(1) {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.flex-item:nth-child(2) {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.flex-item:nth-child(3) {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+/* my */
+
+.scroll-container1 {
+    overflow-y:scroll; 
+    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+    height: calc(100vh - 76px - 100px);    
+    overscroll-behavior: contain;
+    /* background-color: blue;
+    border: 5px solid red; */    
+}
+@media only screen and (max-width: 1000px) {
+    .scroll-container1 {
+        height: calc(100vh - 76px + 0px);  
+    }
+}
+
+.desktop-1
+{
+    /* width: calc(100vw - 100px); */
+    width: 70%;
+    height: calc(100vh - 80px);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background: transparent;
+    overflow-y: scroll;
+}
+@media only screen and (max-width: 1000px) {
+    .desktop-1 {
+        width: 100%;
+        height: calc(100vh - 120px);
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        background: transparent;
+        border: none;
+        /* background: white; */
+    }
+}
+
+.flexbox-container1 {
+    margin-top: 16px;
+    height: auto;
+    display: flex;  
+    justify-content: center;
+}
+@media only screen and (max-width: 1000px) {
+    .flexbox-container1 {
+        height: calc(100vh + 90px);
+    }
+}
+
+.round-desktop-container {
+   width: fit-content;
+   height: fit-content;
+   padding: 6px;
+   background: white;
+   border-radius: 12px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media only screen and (max-width: 1000px) {
+    .round-desktop-container {
+        border-radius: 0px;
+    }
+}
+
+.desktop-preview-container {
+    min-width: 320px;
+    min-height: 100px;
+    background: white;
+    max-width: 300px;
+    padding: 8px;
+}
+@media only screen and (max-width: 1000px) {
+    .desktop-preview-container {
+        min-width: 300px;
+    }
+}
+
+.desktop-preview-container-inner {
+    max-width: 400px;
+}
+
+.desktop-preview-title {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.desktop-preview-image {
+ aspect-ratio: 16 / 9;
+ border-radius: 8px;
+}
+
+.desktop-preview-select-active {
+    background: rgb(33, 128, 244);
+    height: 5px;
+    width: 80%;
+    text-align: center;
+    margin: 2px auto;
+    border-radius: 30px;
+}
+.desktop-preview-select-inactive {
+    background: transparent;
+    height: 5px;
+    width: 80%;
+    text-align: center;
+    margin: 2px auto;
+    border-radius: 30px;
+}
+
+#desktop-scroll-container {
+    position: fixed;
+    display: block;
+    /* height: 50%;
+    width:50%; */
+    background-color: transparent;
+    opacity: 100%;
+    cursor: default;
+    width: 100%;
+}
+
+.desktop-title-1 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.desktop-flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;  
+}
+@media only screen and (max-width: 1000px) {
+    .desktop-flex-container {
+        flex-wrap: wrap;
+        margin: 16px 16px 16px 16px;
+    }
+}
+
+.svg-in-desk-container {
+  width:100%;
+  margin: 8px;
+}
+@media only screen and (max-width: 1000px) {
+    .svg-in-desk-container {
+        width:100%;
+        margin: 0;
+    }
+}
+
+
