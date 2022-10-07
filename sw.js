@@ -86,6 +86,7 @@ self.addEventListener('install', event => {
     {
       console.log(URLS[i]);
       cache.add(URLS[i]);
+      console.log("--->" + URLS[i]);
     }
   })());
 });
