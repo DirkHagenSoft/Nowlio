@@ -1,38 +1,39 @@
 const CACHE_NAME = `my-sample-app-cache-v1`;
 
 var URLS = [ // Add URL you want to cache in this list.
-'/Nowlio/index.html',
-'/Nowlio/core.html',
-'/Nowlio/1.svg',
-'/Nowlio/2.svg',
-'/Nowlio/3.svg',
-'/Nowlio/4.svg',
-'/Nowlio/5.svg',
-'/Nowlio/6.svg',
-'/Nowlio/7.svg',
-'/Nowlio/8.svg',
-'/Nowlio/9.svg',
-'/Nowlio/10.svg',
-'/Nowlio/11.svg',
-'/Nowlio/42.svg',
-'/Nowlio/43.svg',
-'/Nowlio/44.svg',
-'/Nowlio/45.svg',
-'/Nowlio/46.svg',
-'/Nowlio/47.svg',
-'/Nowlio/48.svg',
-'/Nowlio/49.svg',
-'/Nowlio/50.svg',
-'/Nowlio/51.svg',
-'/Nowlio/52.svg',
-'/Nowlio/53.svg'
+'index.html',
+'core.html',
+'1.svg',
+'2.svg',
+'3.svg',
+'4.svg',
+'5.svg',
+'6.svg',
+'7.svg',
+'8.svg',
+'9.svg',
+'10.svg',
+'11.svg',
+'42.svg',
+'43.svg',
+'44.svg',
+'45.svg',
+'46.svg',
+'47.svg',
+'48.svg',
+'49.svg',
+'50.svg',
+'51.svg',
+'52.svg',
+'53.svg'
 ]
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
-    cache.add('1.svg');
+    cache.addAll(URLS);
+    // cache.add('1.svg');
   })());
 });
 
