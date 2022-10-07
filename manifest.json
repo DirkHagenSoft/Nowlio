@@ -3,6 +3,7 @@
     "name": "Nowlio Core",
     "short_name": "NowlioCore",
     "description": "NowlioCore Test",
+    "id": "Nowlio/",
     "start_url": "/Nowlio/",
     "background_color": "#2f3d58",
     "theme_color": "#2f3d58",
