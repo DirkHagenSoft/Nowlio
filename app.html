@@ -6,6 +6,8 @@
     <title>Nowlio Apps</title>
     <meta charset="utf-8">
     <meta name="robots" content="noindex,nofollow" />
+    <link rel="canonical" href="https://dirkhagensoft.github.io/Nowlio/" />
+    <link rel="manifest" href="/Nowlio/manifest.json">
     <style>
         /* inter-500 - latin */
         @font-face {
@@ -260,6 +262,36 @@
             document.getElementById("app" + page).style.visibility = "visible";
             document.getElementById("app" + page).style.display = "block";
         }
+
+        if ('serviceWorker' in navigator)
+        {
+            console.log("swwwww")
+            navigator.serviceWorker.register('/Nowlio/sw-app.js', { scope: '/Nowlio/' });
+            // navigator.serviceWorker.register('sw-app.js', { scope: '/' });
+        }
+
+        function queryCache()
+        {
+            var url = [];
+            caches.open('my-sample-app-cache-v1').then(function (cache)
+            {
+                cache.keys().then(function (keys)
+                {
+                    return Promise.all(
+                        keys.map(function (k) { url.push(k.url); return k.url })
+                    )
+                }).then(function (u) { cacheList(url); })
+            })
+        }
+
+        function cacheList(Items)
+        {
+            for (var i = 0; i < Items.length; i++)
+            {
+                console.log(i + '. SW Item: ' + Items[i]);
+            }
+        }
+
     </script>
 </body>
 
