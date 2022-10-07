@@ -71,7 +71,18 @@ var URLS = [ // Add URL you want to cache in this list.
 'tableecommerce.svg',
 'user.png',
 'user.svg',
-'yellow.svg'
+'yellow.svg',
+'app.html?a=1',
+'app.html?a=2',
+'app.html?a=3',
+'app.html?a=4',
+'app.html?a=5',
+'app.html?a=6',
+'app.html?a=7',
+'app.html?a=8',
+'app.html?a=9',
+'app.html?a=10',
+'app.html?a=11'
 ]
 
 
@@ -84,7 +95,9 @@ self.addEventListener('install', event => {
     // cache.add('1.svg',);
     for(let i = 0; i < URLS.length; i++)
     {
-      console.log(URLS[i]);
+      console.log(URLS[i]);  
+      
+
       cache.add(URLS[i]);
       console.log("--->" + URLS[i]);
     }
