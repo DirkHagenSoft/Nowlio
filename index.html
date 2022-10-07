@@ -6,7 +6,7 @@
     <title>Nowlio Core Login</title>
     <meta name="robots" content="noindex,nofollow" />
     <link rel="canonical" href="https://dirkhagensoft.github.io/Nowlio/" />
-    <link rel="manifest" href="/Nowlio/manifest.json">    
+    <link rel="manifest" href="/Nowlio/manifest.json">
     <style>
         /* inter-500 - latin */
         @font-face {
@@ -182,6 +182,8 @@
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
+            <button onclick="queryCache()">sw</button>
+
         </div>
 
         <!-- <div class="container" style="background-color:#f1f1f1">
@@ -195,6 +197,28 @@
         {
             console.log("swwwww")
             navigator.serviceWorker.register('/Nowlio/sw.js', { scope: '/Nowlio/' });
+        }
+
+        function queryCache()
+        {
+            var url = [];
+            caches.open('my-sample-app-cache-v1').then(function (cache)
+            {
+                cache.keys().then(function (keys)
+                {
+                    return Promise.all(
+                        keys.map(function (k) { url.push(k.url); return k.url })
+                    )
+                }).then(function (u) { cacheList(url); })
+            })
+        }
+
+        function cacheList(Items)
+        {
+            for (var i = 0; i < Items.length; i++)
+            {
+                console.log('SW Items: ' + Items[i]);
+            }
         }
     </script>
 
