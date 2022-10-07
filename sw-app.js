@@ -1,4 +1,4 @@
-const CACHE_NAME = `my-sample-app-cache-v1`;
+const CACHE_NAME = `app-cache-1`;
 
 var URLS = [ // Add URL you want to cache in this list.
 'bell.svg',
