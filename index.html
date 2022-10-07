@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nowlio Core Login</title>
     <meta name="robots" content="noindex,nofollow" />
+    <link rel="manifest" href="/manifest.json">
+    <script type="text/javascript" src="/sw.js"></script>
     <style>
         /* inter-500 - latin */
         @font-face {
@@ -187,6 +189,14 @@
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div> -->
     </form>
+
+    <script>
+        if ('serviceWorker' in navigator)
+        {
+            console.log("swwwww")
+            navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        }
+    </script>
 
 </body>
 
