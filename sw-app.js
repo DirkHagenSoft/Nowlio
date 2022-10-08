@@ -3,9 +3,6 @@ const CACHE_NAME = `app-cache-1`;
 var URLS = [ // Add URL you want to cache in this list.
 'bell.svg',
 'bestseller.png',
-'bestsellerecommerce.jpg',
-'bestsellerecommerce.png',
-'bestsellerecommerce.svg',
 'close.svg',
 'desktop.css',
 'ecommercechart.svg',
