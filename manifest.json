@@ -5,8 +5,8 @@
     "description": "NowlioCore Test",
     "id": "Nowlio/",
     "start_url": "/Nowlio/",
-    "background_color": "#2f3d58",
-    "theme_color": "#2f3d58",
+    "background_color": "#ffffff",
+    "theme_color": "#dcdcdc",
     "orientation": "any",
     "display": "standalone",
     "icons": [
